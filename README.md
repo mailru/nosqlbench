@@ -128,7 +128,7 @@ Running, The First Time
 mkdir $HOME/tarantool_sandbox
 cd $HOME/tarantool_sandbox
 tarantool
-box.cfg{listen=3303, memtx_memory=1073741824,readahead=250000}
+box.cfg{listen = 3303, memtx_memory = 2^30, readahead = 250000}
 box.schema.user.grant('guest','read,write,execute,create,drop','universe')
 box.schema.space.create("512")
 box.space["512"]:create_index("I")
